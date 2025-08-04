@@ -1,0 +1,125 @@
+{
+  "HomePage": {
+    "badge": "Next-Gen Waste Management",
+    "title": "Smart Waste Management for a",
+    "titleHighlight": "Sustainable Future",
+    "description": "Revolutionary IoT-powered smart bins that optimize waste collection, reduce environmental impact, and create cleaner, smarter cities through intelligent monitoring and AI-driven insights.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "features": {
+      "title": "Intelligent Features",
+      "description": "Discover how our smart bin technology transforms waste management with cutting-edge IoT sensors, AI analytics, and real-time monitoring.",
+      "monitoring": {
+        "title": "Real-time Monitoring",
+        "description": "Advanced sensors track fill levels, temperature, and usage patterns with 99.9% accuracy, enabling proactive waste management."
+      },
+      "optimization": {
+        "title": "Route Optimization",
+        "description": "AI-powered algorithms optimize collection routes, reducing fuel consumption by up to 40% and improving operational efficiency."
+      },
+      "categorization": {
+        "title": "Smart Sorting",
+        "description": "Computer vision and machine learning automatically categorize waste types, improving recycling rates by 60%."
+      },
+      "tracking": {
+        "title": "Impact Tracking",
+        "description": "Comprehensive analytics track environmental impact, carbon footprint reduction, and sustainability metrics in real-time."
+      },
+      "mobile": {
+        "title": "Mobile Integration",
+        "description": "Intuitive mobile app provides real-time notifications, collection schedules, and gamified recycling rewards."
+      },
+      "ai": {
+        "title": "AI Analytics",
+        "description": "Machine learning algorithms predict waste patterns, optimize collection schedules, and provide actionable insights."
+      }
+    },
+    "stats": {
+      "title": "Proven Impact",
+      "description": "Our smart bin technology has delivered measurable results across cities worldwide, creating a more sustainable future.",
+      "efficiency": "Efficiency Increase",
+      "efficiencyDesc": "Average improvement in waste collection efficiency",
+      "users": "Active Users",
+      "usersDesc": "Citizens actively using our smart bin network",
+      "waste": "Tons Processed",
+      "wasteDesc": "Total waste processed through our smart system",
+      "cities": "Cities Deployed",
+      "citiesDesc": "Smart cities using our waste management solution"
+    },
+    "tech": {
+      "title": "Technology Stack",
+      "description": "Built with cutting-edge technologies to ensure reliability, scalability, and seamless integration with existing city infrastructure.",
+      "iot": {
+        "title": "IoT Hardware",
+        "description": "Advanced sensors and microcontrollers for real-time data collection and wireless communication."
+      },
+      "cloud": {
+        "title": "Cloud Infrastructure",
+        "description": "Scalable cloud platform for data processing, storage, and real-time analytics with 99.9% uptime."
+      },
+      "mobile": {
+        "title": "Mobile Applications",
+        "description": "Cross-platform mobile apps for citizens, collectors, and administrators with offline capabilities."
+      },
+      "data": {
+        "title": "Data Management",
+        "description": "High-performance databases and streaming platforms for real-time data processing and analytics."
+      },
+      "ai": {
+        "title": "AI & Machine Learning",
+        "description": "Advanced ML models for predictive analytics, computer vision, and intelligent decision making."
+      },
+      "security": {
+        "title": "Security & Privacy",
+        "description": "Enterprise-grade security protocols ensuring data privacy and system integrity."
+      }
+    },
+    "cta": {
+      "title": "Join the Smart City Revolution",
+      "description": "Ready to transform your city's waste management? Connect with our team to learn how smart bins can create a cleaner, more sustainable future.",
+      "contact": {
+        "title": "Get in Touch",
+        "description": "Speak with our experts about implementing smart bins in your city.",
+        "action": "Contact Sales"
+      },
+      "github": {
+        "title": "Open Source",
+        "description": "Explore our open-source components and contribute to the project.",
+        "action": "View on GitHub"
+      },
+      "community": {
+        "title": "Join Community",
+        "description": "Connect with developers, city planners, and sustainability advocates.",
+        "action": "Join Discord"
+      },
+      "learnMore": "Explore Our Technology"
+    }
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register"
+  },
+  "AboutPage": {
+    "title": "About Smart Bin",
+    "description": "Smart Bin is an intelligent waste management system designed to optimize waste collection and promote environmental sustainability.",
+    "features": "Features",
+    "technology": "Technology Stack",
+    "featuresList": {
+      "monitoring": "Real-time fill level monitoring",
+      "optimization": "Smart route optimization for collection trucks",
+      "categorization": "Waste categorization and recycling guidance",
+      "tracking": "Environmental impact tracking",
+      "mobile": "Mobile app integration"
+    }
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  }
+}
