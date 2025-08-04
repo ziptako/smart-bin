@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Recycle, Smartphone, BarChart3, MapPin, Leaf, Zap } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
@@ -15,9 +15,9 @@ export function HeroSection() {
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 dark:from-green-950/20 dark:via-blue-950/20 dark:to-purple-950/20" />
-        <div className="relative container mx-auto px-4">
+        <div className="relative app-container">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-4">
+            <Badge variant="secondary" className="mb-4 mx-auto">
               🌱 {t('badge')}
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
@@ -40,7 +40,7 @@ export function HeroSection() {
 
       {/* Features Grid */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="app-container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('features.title')}</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">{t('features.description')}</p>

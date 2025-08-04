@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import LanguageSwitcher from '../../../components/LanguageSwitcher';
 
 /**
  * 关于页面组件
@@ -11,13 +10,8 @@ export default function About() {
   const tAbout = useTranslations('AboutPage');
 
   return (
-    <div className="min-h-screen p-8">
-      {/* 语言切换器 */}
-      <div className="absolute top-4 right-4">
-        <LanguageSwitcher />
-      </div>
-
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen py-8">
+      <div className="app-container max-w-4xl">
         <nav className="mb-8">
           <Link href="/" className="text-blue-500 hover:text-blue-700 underline">
             ← {tNav('home')}

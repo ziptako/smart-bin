@@ -2,7 +2,8 @@
 
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
-import { routing } from '@/i18n/routing';
+import { routing, type Locale } from '@/i18n/routing';
+import { Button } from '@/components/ui/button';
 
 /**
  * 语言切换器组件
@@ -25,21 +26,25 @@ export default function LanguageSwitcher() {
     router.push(newPath);
   };
 
+  /**
+   * 获取下一个语言
+   */
+  const getNextLocale = (): Locale => {
+    const currentIndex = routing.locales.indexOf(locale as Locale);
+    return routing.locales[(currentIndex + 1) % routing.locales.length] as Locale;
+  };
+
+  const nextLocale = getNextLocale();
+
   return (
-    <div className="flex gap-2">
-      {routing.locales.map((lang) => (
-        <button
-          key={lang}
-          onClick={() => handleLanguageChange(lang)}
-          className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
-            locale === lang
-              ? 'bg-blue-500 text-white'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
-          }`}
-        >
-          {lang.toUpperCase()}
-        </button>
-      ))}
-    </div>
+    <Button
+      variant="outline"
+      size="sm"
+      onClick={() => handleLanguageChange(nextLocale)}
+      className="h-9 px-3"
+      title={`Switch to ${nextLocale.toUpperCase()}`}
+    >
+      {locale.toUpperCase()}
+    </Button>
   );
 }
