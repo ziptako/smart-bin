@@ -1,0 +1,35 @@
+{
+  "HomePage": {
+    "title": "智能垃圾桶",
+    "description": "智能废物管理系统",
+    "getStarted": "开始编辑",
+    "saveChanges": "保存并立即查看您的更改。",
+    "deployNow": "立即部署",
+    "readDocs": "阅读文档"
+  },
+  "Navigation": {
+    "home": "首页",
+    "about": "关于",
+    "contact": "联系我们"
+  },
+  "AboutPage": {
+    "title": "关于智能垃圾桶",
+    "description": "智能垃圾桶是一个智能废物管理系统，旨在优化垃圾收集并促进环境可持续发展。",
+    "features": "功能特性",
+    "technology": "技术栈",
+    "featuresList": {
+      "monitoring": "实时填充水平监控",
+      "optimization": "收集车辆的智能路线优化",
+      "categorization": "垃圾分类和回收指导",
+      "tracking": "环境影响跟踪",
+      "mobile": "移动应用集成"
+    }
+  },
+  "Common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "cancel": "取消",
+    "confirm": "确认"
+  }
+}

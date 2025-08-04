@@ -1,0 +1,35 @@
+{
+  "HomePage": {
+    "title": "Smart Bin",
+    "description": "Intelligent waste management system",
+    "getStarted": "Get started by editing",
+    "saveChanges": "Save and see your changes instantly.",
+    "deployNow": "Deploy now",
+    "readDocs": "Read our docs"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "AboutPage": {
+    "title": "About Smart Bin",
+    "description": "Smart Bin is an intelligent waste management system designed to optimize waste collection and promote environmental sustainability.",
+    "features": "Features",
+    "technology": "Technology Stack",
+    "featuresList": {
+      "monitoring": "Real-time fill level monitoring",
+      "optimization": "Smart route optimization for collection trucks",
+      "categorization": "Waste categorization and recycling guidance",
+      "tracking": "Environmental impact tracking",
+      "mobile": "Mobile app integration"
+    }
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  }
+}
