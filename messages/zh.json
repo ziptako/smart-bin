@@ -1,16 +1,106 @@
 {
   "HomePage": {
-    "title": "智能垃圾桶",
-    "description": "智能废物管理系统",
-    "getStarted": "开始编辑",
-    "saveChanges": "保存并立即查看您的更改。",
-    "deployNow": "立即部署",
-    "readDocs": "阅读文档"
+    "badge": "新一代废物管理",
+    "title": "智能废物管理，创造",
+    "titleHighlight": "可持续未来",
+    "description": "革命性的物联网智能垃圾桶，通过智能监控和AI驱动的洞察，优化垃圾收集，减少环境影响，打造更清洁、更智能的城市。",
+    "getStarted": "立即开始",
+    "learnMore": "了解更多",
+    "features": {
+      "title": "智能功能",
+      "description": "探索我们的智能垃圾桶技术如何通过尖端物联网传感器、AI分析和实时监控来改变废物管理。",
+      "monitoring": {
+        "title": "实时监控",
+        "description": "先进传感器以99.9%的准确率跟踪填充水平、温度和使用模式，实现主动废物管理。"
+      },
+      "optimization": {
+        "title": "路线优化",
+        "description": "AI驱动的算法优化收集路线，减少高达40%的燃料消耗，提高运营效率。"
+      },
+      "categorization": {
+        "title": "智能分拣",
+        "description": "计算机视觉和机器学习自动分类废物类型，将回收率提高60%。"
+      },
+      "tracking": {
+        "title": "影响跟踪",
+        "description": "综合分析实时跟踪环境影响、碳足迹减少和可持续性指标。"
+      },
+      "mobile": {
+        "title": "移动集成",
+        "description": "直观的移动应用提供实时通知、收集计划和游戏化回收奖励。"
+      },
+      "ai": {
+        "title": "AI分析",
+        "description": "机器学习算法预测废物模式，优化收集计划，并提供可操作的洞察。"
+      }
+    },
+    "stats": {
+      "title": "验证影响",
+      "description": "我们的智能垃圾桶技术已在全球城市中取得可衡量的成果，创造更可持续的未来。",
+      "efficiency": "效率提升",
+      "efficiencyDesc": "废物收集效率的平均改善",
+      "users": "活跃用户",
+      "usersDesc": "积极使用我们智能垃圾桶网络的市民",
+      "waste": "处理吨数",
+      "wasteDesc": "通过我们智能系统处理的废物总量",
+      "cities": "部署城市",
+      "citiesDesc": "使用我们废物管理解决方案的智慧城市"
+    },
+    "tech": {
+      "title": "技术栈",
+      "description": "采用尖端技术构建，确保可靠性、可扩展性，并与现有城市基础设施无缝集成。",
+      "iot": {
+        "title": "物联网硬件",
+        "description": "用于实时数据收集和无线通信的先进传感器和微控制器。"
+      },
+      "cloud": {
+        "title": "云基础设施",
+        "description": "可扩展的云平台，用于数据处理、存储和实时分析，正常运行时间达99.9%。"
+      },
+      "mobile": {
+        "title": "移动应用",
+        "description": "为市民、收集员和管理员提供跨平台移动应用，具备离线功能。"
+      },
+      "data": {
+        "title": "数据管理",
+        "description": "用于实时数据处理和分析的高性能数据库和流媒体平台。"
+      },
+      "ai": {
+        "title": "AI与机器学习",
+        "description": "用于预测分析、计算机视觉和智能决策的先进ML模型。"
+      },
+      "security": {
+        "title": "安全与隐私",
+        "description": "企业级安全协议，确保数据隐私和系统完整性。"
+      }
+    },
+    "cta": {
+      "title": "加入智慧城市革命",
+      "description": "准备好改变您城市的废物管理了吗？联系我们的团队，了解智能垃圾桶如何创造更清洁、更可持续的未来。",
+      "contact": {
+        "title": "联系我们",
+        "description": "与我们的专家交流，了解在您的城市实施智能垃圾桶的方案。",
+        "action": "联系销售"
+      },
+      "github": {
+        "title": "开源项目",
+        "description": "探索我们的开源组件并为项目做出贡献。",
+        "action": "查看GitHub"
+      },
+      "community": {
+        "title": "加入社区",
+        "description": "与开发者、城市规划师和可持续发展倡导者建立联系。",
+        "action": "加入Discord"
+      },
+      "learnMore": "探索我们的技术"
+    }
   },
   "Navigation": {
     "home": "首页",
     "about": "关于",
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "login": "登录",
+    "register": "注册"
   },
   "AboutPage": {
     "title": "关于智能垃圾桶",
