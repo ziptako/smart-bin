@@ -1,12 +1,19 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Cpu, Cloud, Smartphone, Database, Wifi, Shield } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Cpu, Cloud, Smartphone, Database, Wifi, Shield, ChevronDown, ChevronUp } from 'lucide-react';
 
+/**
+ * 技术规格组件
+ * 可折叠的技术栈展示，默认收起状态
+ */
 export function TechSection() {
   const t = useTranslations('HomePage');
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const techCategories = [
     {
@@ -54,39 +61,51 @@ export function TechSection() {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-muted/30">
       <div className="app-container">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('tech.title')}</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">{t('tech.description')}</p>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-4">{t('tech.title')}</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t('tech.description')}</p>
+
+          {/* 折叠控制按钮 */}
+          <Button variant="outline" onClick={() => setIsExpanded(!isExpanded)} className="flex items-center space-x-2">
+            <span>{isExpanded ? t('tech.collapse') : t('tech.expand')}</span>
+            {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+          </Button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {techCategories.map((category, index) => {
-            const Icon = category.icon;
-            return (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+        {/* 可折叠的技术栈内容 */}
+        <div
+          className={`transition-all duration-500 ease-in-out overflow-hidden ${
+            isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
+            {techCategories.map((category, index) => {
+              const Icon = category.icon;
+              return (
+                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
                       <Icon className={`h-6 w-6 ${category.color}`} />
+                      <h3>{category.title}</h3>
+                    </CardTitle>
+                    <CardDescription>{category.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">{category.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {category.technologies.map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="secondary" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
                     </div>
-                    <CardTitle className="text-lg">{category.title}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">{category.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {category.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

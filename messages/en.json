@@ -1,9 +1,9 @@
 {
   "HomePage": {
     "badge": "Next-Gen Waste Management",
-    "title": "Smart Waste Management for a",
-    "titleHighlight": "Sustainable Future",
-    "description": "Revolutionary IoT-powered smart bins that optimize waste collection, reduce environmental impact, and create cleaner, smarter cities through intelligent monitoring and AI-driven insights.",
+    "title": "Save 47% Collection Costs, Reduce 35% Carbon Emissions with",
+    "titleHighlight": "Smart Bins",
+    "description": "Designed for mayors, property managers, and facility operators. Revolutionary IoT-powered smart bins that dramatically reduce operational costs and environmental impact through intelligent monitoring and AI-driven insights.",
     "getStarted": "Get Started",
     "learnMore": "Learn More",
     "features": {
@@ -11,27 +11,78 @@
       "description": "Discover how our smart bin technology transforms waste management with cutting-edge IoT sensors, AI analytics, and real-time monitoring.",
       "monitoring": {
         "title": "Real-time Monitoring",
-        "description": "Advanced sensors track fill levels, temperature, and usage patterns with 99.9% accuracy, enabling proactive waste management."
+        "description": "Advanced sensors track fill levels, temperature, and usage patterns with 99.9% accuracy, enabling proactive waste management.",
+        "alt": "Real-time monitoring dashboard showing bin fill levels and sensor data"
       },
       "optimization": {
         "title": "Route Optimization",
-        "description": "AI-powered algorithms optimize collection routes, reducing fuel consumption by up to 40% and improving operational efficiency."
+        "description": "AI-powered algorithms optimize collection routes, reducing fuel consumption by up to 40% and improving operational efficiency.",
+        "alt": "Route optimization map interface showing optimized collection paths"
       },
       "categorization": {
         "title": "Smart Sorting",
-        "description": "Computer vision and machine learning automatically categorize waste types, improving recycling rates by 60%."
+        "description": "Computer vision and machine learning automatically categorize waste types, improving recycling rates by 60%.",
+        "alt": "Smart sorting system using computer vision to categorize waste types"
       },
       "tracking": {
         "title": "Impact Tracking",
-        "description": "Comprehensive analytics track environmental impact, carbon footprint reduction, and sustainability metrics in real-time."
+        "description": "Comprehensive analytics track environmental impact, carbon footprint reduction, and sustainability metrics in real-time.",
+        "alt": "Environmental impact tracking dashboard with carbon footprint metrics"
       },
       "mobile": {
         "title": "Mobile Integration",
-        "description": "Intuitive mobile app provides real-time notifications, collection schedules, and gamified recycling rewards."
+        "description": "Intuitive mobile app provides real-time notifications, collection schedules, and gamified recycling rewards.",
+        "alt": "Mobile app interface showing bin status notifications and recycling rewards"
       },
       "ai": {
         "title": "AI Analytics",
-        "description": "Machine learning algorithms predict waste patterns, optimize collection schedules, and provide actionable insights."
+        "description": "Machine learning algorithms predict waste patterns, optimize collection schedules, and provide actionable insights.",
+        "alt": "AI analytics dashboard displaying predictive waste patterns and insights"
+      }
+    },
+    "comparison": {
+      "alt": "Smart Bin vs Traditional Bin comparison diagram showing intelligent monitoring and optimization benefits",
+      "traditional": {
+        "title": "Traditional Bins",
+        "status": "Full!",
+        "alt": "Traditional bin overflow status diagram showing red warning alert",
+        "issues": {
+          "unpredictable": "Unpredictable overflow",
+          "inefficient": "Frequent unnecessary trips",
+          "costly": "High operational costs",
+          "pollution": "Environmental risks"
+        }
+      },
+      "smart": {
+        "title": "Smart Bin",
+        "badge": "Recommended",
+        "alt": "Smart Bin with IoT sensors for real-time monitoring and optimization",
+        "benefits": {
+          "monitoring": "Real-time fill monitoring",
+          "scheduling": "Smart collection scheduling",
+          "cost": "Save 47% costs",
+          "carbon": "Reduce 35% emissions"
+        }
+      },
+      "result": "Fewer collection trips, dramatically lower costs"
+    },
+    "scenarios": {
+      "title": "Smart Solutions",
+      "description": "Targeted technical solutions for real-world scenarios, with every problem backed by data-driven answers.",
+      "overflow": {
+        "scenario": "Bin Overflow",
+        "problem": "Unpredictable overflow timing leads to waste spillage, environmental pollution, and increased complaints",
+        "solution": "Ultrasonic sensors for real-time monitoring, 98% accuracy overflow alerts, proactive collection scheduling"
+      },
+      "odor": {
+        "scenario": "Summer Odor Issues",
+        "problem": "High temperatures cause waste fermentation and odor spread, affecting surrounding environment and residents",
+        "solution": "Temperature + odor sensor integration, automatic sanitization system, 95% odor control rate"
+      },
+      "sorting": {
+        "scenario": "Recyclable Misplacement",
+        "problem": "Insufficient resident awareness leads to mixed recyclables, reducing recycling efficiency",
+        "solution": "CV model recognition + voice prompts, 92% sorting accuracy, improved recycling quality"
       }
     },
     "stats": {
@@ -44,11 +95,109 @@
       "waste": "Tons Processed",
       "wasteDesc": "Total waste processed through our smart system",
       "cities": "Cities Deployed",
-      "citiesDesc": "Smart cities using our waste management solution"
+      "citiesDesc": "Smart cities using our waste management solution",
+      "kpi": {
+        "title": "Core KPI Data",
+        "verified": "Verified",
+        "collection": {
+          "label": "Collection Reduction",
+          "description": "Smart scheduling optimization significantly reduces unnecessary trips",
+          "case": "Case: Shenzhen Nanshan District - March 2024 data"
+        },
+        "reduction": {
+          "label": "Waste Reduction",
+          "description": "Smart sorting and recycling optimization reduces final disposal volume",
+          "case": "Case: Shanghai Pudong New Area - February 2024 data"
+        },
+        "recycling": {
+          "label": "Recycling Rate Boost",
+          "description": "AI recognition and user education dramatically improve sorting quality",
+          "case": "Case: Beijing Chaoyang District - January 2024 data"
+        }
+      },
+      "overall": {
+        "title": "Overall Operations Data"
+      }
+    },
+    "roi": {
+      "title": "ROI Calculator",
+      "description": "Enter your actual parameters to instantly calculate cost savings and environmental benefits from Smart Bin",
+      "inputs": {
+        "title": "Input Parameters",
+        "description": "Please fill in your current operational data",
+        "binCount": "Number of Bins",
+        "frequency": "Weekly Collection Frequency",
+        "laborCost": "Labor Cost per Trip (¥)",
+        "fuelCost": "Fuel Cost per Trip (¥)",
+        "deviceCost": "Device Unit Price (¥)",
+        "platformCost": "Monthly Subscription (¥/bin)"
+      },
+      "calculate": "Calculate ROI",
+      "results": {
+        "title": "ROI Analysis",
+        "description": "Revenue forecast based on actual data",
+        "payback": "Payback Period",
+        "years": "years",
+        "paybackDesc": "Investment recovery through operational cost savings",
+        "savings": "Annual Savings",
+        "from": "from",
+        "to": "reduced to",
+        "carbon": "Annual Carbon Reduction",
+        "tons": "tons CO₂",
+        "carbonDesc": "Reduced carbon emissions from collection vehicle trips",
+        "placeholder": "Click calculate button to view ROI analysis"
+      }
+    },
+    "trust": {
+      "title": "Customer Trust & Certifications",
+      "description": "Certified by authoritative institutions, serving renowned clients, proving product value with strength",
+      "customers": {
+        "title": "Success Stories",
+        "deployment": "Deployment Date",
+        "bins": "Device Count"
+      },
+      "certifications": {
+        "title": "Authoritative Certifications",
+        "issuer": "Certification Body",
+        "date": "Certification Date",
+        "download": "Download Certificate"
+      },
+      "reports": {
+        "title": "Third-party Test Reports",
+        "description": "Performance and environmental test reports issued by authoritative testing institutions, ensuring product quality and environmental benefits",
+        "performance": "Performance Test Report",
+        "environmental": "Environmental Impact Report"
+      }
+    },
+    "developer": {
+      "title": "Developer Community",
+      "description": "Open source project, complete API documentation, active developer community to support your integration development",
+      "github": {
+        "description": "Lightweight, responsive smart bin real-time monitoring frontend with visualization of fill levels, temperature, humidity and alerts",
+        "visit": "Visit Repository",
+        "stars": "Stars",
+        "forks": "Forks",
+        "issues": "Issues",
+        "contributors": "Contributors",
+        "reportIssue": "Report Issue",
+        "fork": "Fork Project",
+        "contribute": "Contributing Guide"
+      },
+      "resources": {
+        "title": "Development Resources",
+        "access": "Access Documentation"
+      },
+      "community": {
+        "title": "Join Community",
+        "members": "Members",
+        "join": "Join Now"
+      }
     },
     "tech": {
-      "title": "Technology Stack",
+      "title": "Technical Specifications",
       "description": "Built with cutting-edge technologies to ensure reliability, scalability, and seamless integration with existing city infrastructure.",
+      "expand": "View Technical Details",
+      "collapse": "Hide Technical Details",
       "iot": {
         "title": "IoT Hardware",
         "description": "Advanced sensors and microcontrollers for real-time data collection and wireless communication."
