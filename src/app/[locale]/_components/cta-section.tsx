@@ -2,7 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { CTACard } from '@/components/cta-card';
+import { SectionHeader } from '@/components/section-header';
 import { ArrowRight, Mail, ExternalLink, MessageCircle } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 
@@ -13,50 +14,36 @@ export function CTASection() {
     <section className="py-20 bg-gradient-to-br from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-black/20" />
       <div className="relative app-container">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('cta.title')}</h2>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto">{t('cta.description')}</p>
+        <div className="mb-16">
+          <SectionHeader
+            title={t('cta.title')}
+            description={t('cta.description')}
+            size="lg"
+            className="text-white [&_p]:opacity-90"
+          />
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          <Card className="bg-white/10 backdrop-blur border-white/20 text-white">
-            <CardContent className="pt-6 text-center flex flex-col h-full">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{t('cta.contact.title')}</h3>
-              <p className="opacity-90 mb-4 flex-grow">{t('cta.contact.description')}</p>
-              <Button variant="secondary" className="w-full mt-auto">
-                {t('cta.contact.action')}
-              </Button>
-            </CardContent>
-          </Card>
+          <CTACard
+            icon={Mail}
+            title={t('cta.contact.title')}
+            description={t('cta.contact.description')}
+            actionText={t('cta.contact.action')}
+          />
 
-          <Card className="bg-white/10 backdrop-blur border-white/20 text-white">
-            <CardContent className="pt-6 text-center flex flex-col h-full">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ExternalLink className="h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{t('cta.github.title')}</h3>
-              <p className="opacity-90 mb-4 flex-grow">{t('cta.github.description')}</p>
-              <Button variant="secondary" className="w-full mt-auto">
-                {t('cta.github.action')}
-              </Button>
-            </CardContent>
-          </Card>
+          <CTACard
+            icon={ExternalLink}
+            title={t('cta.github.title')}
+            description={t('cta.github.description')}
+            actionText={t('cta.github.action')}
+          />
 
-          <Card className="bg-white/10 backdrop-blur border-white/20 text-white">
-            <CardContent className="pt-6 text-center flex flex-col h-full">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageCircle className="h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{t('cta.community.title')}</h3>
-              <p className="opacity-90 mb-4 flex-grow">{t('cta.community.description')}</p>
-              <Button variant="secondary" className="w-full mt-auto">
-                {t('cta.community.action')}
-              </Button>
-            </CardContent>
-          </Card>
+          <CTACard
+            icon={MessageCircle}
+            title={t('cta.community.title')}
+            description={t('cta.community.description')}
+            actionText={t('cta.community.action')}
+          />
         </div>
 
         <div className="text-center">

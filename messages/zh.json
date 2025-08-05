@@ -1,9 +1,9 @@
 {
   "HomePage": {
     "badge": "新一代废物管理",
-    "title": "智能废物管理，创造",
-    "titleHighlight": "可持续未来",
-    "description": "革命性的物联网智能垃圾桶，通过智能监控和AI驱动的洞察，优化垃圾收集，减少环境影响，打造更清洁、更智能的城市。",
+    "title": "节省47%清运成本、降低35%碳排的",
+    "titleHighlight": "智能垃圾桶",
+    "description": "专为市长、物业、园区运营方设计的革命性物联网智能垃圾桶，通过智能监控和AI驱动的洞察，大幅降低运营成本，减少环境影响。",
     "getStarted": "立即开始",
     "learnMore": "了解更多",
     "features": {
@@ -11,27 +11,78 @@
       "description": "探索我们的智能垃圾桶技术如何通过尖端物联网传感器、AI分析和实时监控来改变废物管理。",
       "monitoring": {
         "title": "实时监控",
-        "description": "先进传感器以99.9%的准确率跟踪填充水平、温度和使用模式，实现主动废物管理。"
+        "description": "先进传感器以99.9%的准确率跟踪填充水平、温度和使用模式，实现主动废物管理。",
+        "alt": "实时监控传感器检测垃圾桶填充状态示意图"
       },
       "optimization": {
         "title": "路线优化",
-        "description": "AI驱动的算法优化收集路线，减少高达40%的燃料消耗，提高运营效率。"
+        "description": "AI驱动的算法优化收集路线，减少高达40%的燃料消耗，提高运营效率。",
+        "alt": "AI路线优化算法地图界面显示最优清运路径"
       },
       "categorization": {
         "title": "智能分拣",
-        "description": "计算机视觉和机器学习自动分类废物类型，将回收率提高60%。"
+        "description": "计算机视觉和机器学习自动分类废物类型，将回收率提高60%。",
+        "alt": "智能分拣系统识别不同垃圾类型的计算机视觉界面"
       },
       "tracking": {
         "title": "影响跟踪",
-        "description": "综合分析实时跟踪环境影响、碳足迹减少和可持续性指标。"
+        "description": "综合分析实时跟踪环境影响、碳足迹减少和可持续性指标。",
+        "alt": "环境影响跟踪仪表板显示碳减排和可持续性数据"
       },
       "mobile": {
         "title": "移动集成",
-        "description": "直观的移动应用提供实时通知、收集计划和游戏化回收奖励。"
+        "description": "直观的移动应用提供实时通知、收集计划和游戏化回收奖励。",
+        "alt": "移动应用界面显示垃圾桶状态通知和回收奖励"
       },
       "ai": {
         "title": "AI分析",
-        "description": "机器学习算法预测废物模式，优化收集计划，并提供可操作的洞察。"
+        "description": "机器学习算法预测废物模式，优化收集计划，并提供可操作的洞察。",
+        "alt": "AI分析仪表板显示废物模式预测和数据洞察"
+      }
+    },
+    "comparison": {
+      "traditional": {
+        "title": "传统垃圾桶",
+        "status": "满溢!",
+        "alt": "传统垃圾桶满溢状态示意图，显示红色警告",
+        "issues": {
+          "unpredictable": "无法预知满溢时间",
+          "inefficient": "频繁无效清运",
+          "costly": "高运营成本",
+          "pollution": "环境污染风险"
+        }
+      },
+      "smart": {
+        "title": "Smart Bin",
+        "badge": "推荐",
+        "alt": "Smart Bin智能垃圾桶实时监控界面，显示75%填充状态",
+        "benefits": {
+          "monitoring": "实时监控填充状态",
+          "scheduling": "智能调度清运",
+          "cost": "节省47%成本",
+          "carbon": "降低35%碳排"
+        }
+      },
+      "result": "垃圾清运车少跑一趟，成本大幅降低",
+      "alt": "Smart Bin智能垃圾桶与传统垃圾桶对比图，展示智能监控和优化效果"
+    },
+    "scenarios": {
+      "title": "智能解决方案",
+      "description": "针对实际场景痛点，提供精准的技术解决方案，让每个问题都有数据支撑的答案。",
+      "overflow": {
+        "scenario": "垃圾桶满溢",
+        "problem": "无法预知满溢时间，导致垃圾外溢、环境污染、投诉增加",
+        "solution": "超声波传感器实时监测，98%准确率满溢预警，提前调度清运"
+      },
+      "odor": {
+        "scenario": "夏天异味扩散",
+        "problem": "高温导致垃圾发酵产生异味，影响周边环境和居民生活",
+        "solution": "温度+气味传感器联动监测，自动触发消杀系统，95%异味控制率"
+      },
+      "sorting": {
+        "scenario": "误投可回收物",
+        "problem": "居民分类意识不足，可回收物混投，降低回收效率",
+        "solution": "CV模型智能识别+语音提示，92%分类准确率，提升回收质量"
       }
     },
     "stats": {
@@ -44,11 +95,109 @@
       "waste": "处理吨数",
       "wasteDesc": "通过我们智能系统处理的废物总量",
       "cities": "部署城市",
-      "citiesDesc": "使用我们废物管理解决方案的智慧城市"
+      "citiesDesc": "使用我们废物管理解决方案的智慧城市",
+      "kpi": {
+        "title": "核心KPI数据",
+        "verified": "已验证",
+        "collection": {
+          "label": "减少清运次数",
+          "description": "通过智能调度优化，显著降低无效清运",
+          "case": "案例：深圳南山区 - 2024年3月数据"
+        },
+        "reduction": {
+          "label": "垃圾减量",
+          "description": "智能分拣和回收优化，减少最终处理量",
+          "case": "案例：上海浦东新区 - 2024年2月数据"
+        },
+        "recycling": {
+          "label": "回收率提升",
+          "description": "AI识别和用户教育，大幅提升分类质量",
+          "case": "案例：北京朝阳区 - 2024年1月数据"
+        }
+      },
+      "overall": {
+        "title": "总体运营数据"
+      }
+    },
+    "roi": {
+      "title": "投资回报计算器",
+      "description": "输入您的实际参数，立即计算Smart Bin为您带来的成本节省和环保效益",
+      "inputs": {
+        "title": "输入参数",
+        "description": "请填写您当前的运营数据",
+        "binCount": "垃圾桶数量",
+        "frequency": "每周清运次数",
+        "laborCost": "单次人力成本(元)",
+        "fuelCost": "单次燃料成本(元)",
+        "deviceCost": "设备单价(元)",
+        "platformCost": "月订阅费(元/桶)"
+      },
+      "calculate": "计算ROI",
+      "results": {
+        "title": "投资回报分析",
+        "description": "基于实际数据的收益预测",
+        "payback": "投资回本期",
+        "years": "年",
+        "paybackDesc": "通过运营成本节省实现投资回收",
+        "savings": "年节省费用",
+        "from": "从",
+        "to": "降至",
+        "carbon": "年碳减排量",
+        "tons": "吨CO₂",
+        "carbonDesc": "减少清运车辆行驶产生的碳排放",
+        "placeholder": "点击计算按钮查看投资回报分析"
+      }
+    },
+    "trust": {
+      "title": "客户信任与认证",
+      "description": "获得权威机构认证，服务知名客户，用实力证明产品价值",
+      "customers": {
+        "title": "成功案例",
+        "deployment": "部署时间",
+        "bins": "设备数量"
+      },
+      "certifications": {
+        "title": "权威认证",
+        "issuer": "认证机构",
+        "date": "认证时间",
+        "download": "下载证书"
+      },
+      "reports": {
+        "title": "第三方测试报告",
+        "description": "由权威检测机构出具的性能和环保测试报告，确保产品质量和环保效果",
+        "performance": "性能测试报告",
+        "environmental": "环保影响报告"
+      }
+    },
+    "developer": {
+      "title": "开发者社区",
+      "description": "开源项目，完整API文档，活跃的开发者社区，助力您的集成开发",
+      "github": {
+        "description": "轻量化、响应式的智能垃圾桶实时监控前端，可视化填充率、温湿度与告警",
+        "visit": "访问仓库",
+        "stars": "Star数",
+        "forks": "Fork数",
+        "issues": "Issues",
+        "contributors": "贡献者",
+        "reportIssue": "报告问题",
+        "fork": "Fork项目",
+        "contribute": "贡献指南"
+      },
+      "resources": {
+        "title": "开发资源",
+        "access": "访问文档"
+      },
+      "community": {
+        "title": "加入社区",
+        "members": "成员数",
+        "join": "立即加入"
+      }
     },
     "tech": {
-      "title": "技术栈",
+      "title": "技术规格",
       "description": "采用尖端技术构建，确保可靠性、可扩展性，并与现有城市基础设施无缝集成。",
+      "expand": "查看技术详情",
+      "collapse": "收起技术详情",
       "iot": {
         "title": "物联网硬件",
         "description": "用于实时数据收集和无线通信的先进传感器和微控制器。"
