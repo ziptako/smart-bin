@@ -2,8 +2,9 @@
 
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
-import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { FeatureCard } from '@/components/feature-card';
+import { SectionHeader } from '@/components/section-header';
 import { ArrowRight, Recycle, Smartphone, BarChart3, MapPin, Leaf, Zap } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 
@@ -113,77 +114,58 @@ export function HeroSection() {
       {/* Features Grid */}
       <section className="py-12 md:py-20 bg-background">
         <div className="app-container">
-          <div className="text-center mb-8 md:mb-16">
-            <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">{t('features.title')}</h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">{t('features.description')}</p>
+          <div className="mb-8 md:mb-16">
+            <SectionHeader title={t('features.title')} description={t('features.description')} />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardHeader className="p-4 md:p-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-green-100 dark:bg-green-900/20 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                  <BarChart3 className="h-5 w-5 md:h-6 md:w-6 text-green-600 dark:text-green-400" />
-                </div>
-                <CardTitle className="text-lg md:text-xl">{t('features.monitoring.title')}</CardTitle>
-                <CardDescription className="text-sm md:text-base">
-                  {t('features.monitoring.description')}
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <FeatureCard
+              icon={BarChart3}
+              title={t('features.monitoring.title')}
+              description={t('features.monitoring.description')}
+              iconColor="text-green-600 dark:text-green-400"
+              iconBgColor="bg-green-100 dark:bg-green-900/20"
+            />
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardHeader className="p-4 md:p-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                  <MapPin className="h-5 w-5 md:h-6 md:w-6 text-blue-600 dark:text-blue-400" />
-                </div>
-                <CardTitle className="text-lg md:text-xl">{t('features.optimization.title')}</CardTitle>
-                <CardDescription className="text-sm md:text-base">
-                  {t('features.optimization.description')}
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <FeatureCard
+              icon={MapPin}
+              title={t('features.optimization.title')}
+              description={t('features.optimization.description')}
+              iconColor="text-blue-600 dark:text-blue-400"
+              iconBgColor="bg-blue-100 dark:bg-blue-900/20"
+            />
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardHeader className="p-4 md:p-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                  <Recycle className="h-5 w-5 md:h-6 md:w-6 text-purple-600 dark:text-purple-400" />
-                </div>
-                <CardTitle className="text-lg md:text-xl">{t('features.categorization.title')}</CardTitle>
-                <CardDescription className="text-sm md:text-base">
-                  {t('features.categorization.description')}
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <FeatureCard
+              icon={Recycle}
+              title={t('features.categorization.title')}
+              description={t('features.categorization.description')}
+              iconColor="text-purple-600 dark:text-purple-400"
+              iconBgColor="bg-purple-100 dark:bg-purple-900/20"
+            />
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardHeader className="p-4 md:p-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-orange-100 dark:bg-orange-900/20 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                  <Leaf className="h-5 w-5 md:h-6 md:w-6 text-orange-600 dark:text-orange-400" />
-                </div>
-                <CardTitle className="text-lg md:text-xl">{t('features.tracking.title')}</CardTitle>
-                <CardDescription className="text-sm md:text-base">{t('features.tracking.description')}</CardDescription>
-              </CardHeader>
-            </Card>
+            <FeatureCard
+              icon={Leaf}
+              title={t('features.tracking.title')}
+              description={t('features.tracking.description')}
+              iconColor="text-orange-600 dark:text-orange-400"
+              iconBgColor="bg-orange-100 dark:bg-orange-900/20"
+            />
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardHeader className="p-4 md:p-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-indigo-100 dark:bg-indigo-900/20 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                  <Smartphone className="h-5 w-5 md:h-6 md:w-6 text-indigo-600 dark:text-indigo-400" />
-                </div>
-                <CardTitle className="text-lg md:text-xl">{t('features.mobile.title')}</CardTitle>
-                <CardDescription className="text-sm md:text-base">{t('features.mobile.description')}</CardDescription>
-              </CardHeader>
-            </Card>
+            <FeatureCard
+              icon={Smartphone}
+              title={t('features.mobile.title')}
+              description={t('features.mobile.description')}
+              iconColor="text-indigo-600 dark:text-indigo-400"
+              iconBgColor="bg-indigo-100 dark:bg-indigo-900/20"
+            />
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardHeader className="p-4 md:p-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-teal-100 dark:bg-teal-900/20 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                  <Zap className="h-5 w-5 md:h-6 md:w-6 text-teal-600 dark:text-teal-400" />
-                </div>
-                <CardTitle className="text-lg md:text-xl">{t('features.ai.title')}</CardTitle>
-                <CardDescription className="text-sm md:text-base">{t('features.ai.description')}</CardDescription>
-              </CardHeader>
-            </Card>
+            <FeatureCard
+              icon={Zap}
+              title={t('features.ai.title')}
+              description={t('features.ai.description')}
+              iconColor="text-teal-600 dark:text-teal-400"
+              iconBgColor="bg-teal-100 dark:bg-teal-900/20"
+            />
           </div>
         </div>
       </section>

@@ -1,10 +1,11 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { CustomerCaseCard } from '@/components/customer-case-card';
+import { SectionHeader } from '@/components/section-header';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Download, Shield, Award, Building2 } from 'lucide-react';
+import { Download, Shield, Award } from 'lucide-react';
 
 /**
  * 信任链组件
@@ -81,12 +82,8 @@ export function TrustSection() {
     <section className="py-16 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         {/* 标题 */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Shield className="h-8 w-8 text-green-600" />
-            <h2 className="text-3xl font-bold">{t('trust.title')}</h2>
-          </div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t('trust.description')}</p>
+        <div className="mb-12">
+          <SectionHeader title={t('trust.title')} description={t('trust.description')} size="lg" />
         </div>
 
         {/* 客户案例墙 */}
@@ -94,34 +91,16 @@ export function TrustSection() {
           <h3 className="text-2xl font-semibold text-center mb-8">{t('trust.customers.title')}</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {customers.map((customer, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  {/* 客户Logo */}
-                  <div className="flex items-center justify-center h-16 mb-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                    <Building2 className="h-8 w-8 text-gray-400" />
-                    {/* 实际项目中这里会是真实的logo图片 */}
-                    {/* <img src={customer.logo} alt={customer.name} className="h-8" /> */}
-                  </div>
-
-                  {/* 客户信息 */}
-                  <div className="text-center">
-                    <h4 className="font-semibold text-sm mb-2">{customer.name}</h4>
-                    <div className="space-y-1 text-xs text-muted-foreground">
-                      <div className="flex justify-between">
-                        <span>{t('trust.customers.deployment')}:</span>
-                        <span>{customer.deployment}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>{t('trust.customers.bins')}:</span>
-                        <span>{customer.bins}</span>
-                      </div>
-                    </div>
-                    <Badge variant="secondary" className="mt-2 text-xs">
-                      {customer.result}
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
+              <CustomerCaseCard
+                key={index}
+                name={customer.name}
+                deployment={customer.deployment}
+                bins={customer.bins}
+                result={customer.result}
+                deploymentLabel={t('trust.customers.deployment')}
+                binsLabel={t('trust.customers.bins')}
+                className="hover:shadow-lg transition-shadow"
+              />
             ))}
           </div>
         </div>

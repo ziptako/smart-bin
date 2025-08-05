@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { TechCard } from '@/components/tech-card';
+import { SectionHeader } from '@/components/section-header';
 import { Cpu, Cloud, Smartphone, Database, Wifi, Shield, ChevronDown, ChevronUp } from 'lucide-react';
 
 /**
@@ -64,14 +64,19 @@ export function TechSection() {
     <section className="py-20 bg-muted/30">
       <div className="app-container">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-4">{t('tech.title')}</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t('tech.description')}</p>
+          <SectionHeader title={t('tech.title')} description={t('tech.description')} size="lg" />
 
           {/* 折叠控制按钮 */}
-          <Button variant="outline" onClick={() => setIsExpanded(!isExpanded)} className="flex items-center space-x-2">
-            <span>{isExpanded ? t('tech.collapse') : t('tech.expand')}</span>
-            {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-          </Button>
+          <div className="mt-6">
+            <Button
+              variant="outline"
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="flex items-center space-x-2"
+            >
+              <span>{isExpanded ? t('tech.collapse') : t('tech.expand')}</span>
+              {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+            </Button>
+          </div>
         </div>
 
         {/* 可折叠的技术栈内容 */}
@@ -81,30 +86,16 @@ export function TechSection() {
           }`}
         >
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
-            {techCategories.map((category, index) => {
-              const Icon = category.icon;
-              return (
-                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <Icon className={`h-6 w-6 ${category.color}`} />
-                      <h3>{category.title}</h3>
-                    </CardTitle>
-                    <CardDescription>{category.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">{category.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {category.technologies.map((tech, techIndex) => (
-                        <Badge key={techIndex} variant="secondary" className="text-xs">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+            {techCategories.map((category, index) => (
+              <TechCard
+                key={index}
+                icon={category.icon}
+                title={category.title}
+                description={category.description}
+                technologies={category.technologies}
+                iconColor={category.color}
+              />
+            ))}
           </div>
         </div>
       </div>

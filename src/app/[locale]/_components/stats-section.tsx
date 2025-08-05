@@ -1,8 +1,8 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { StatCard } from '@/components/stat-card';
+import { SectionHeader } from '@/components/section-header';
 import { TrendingUp, Users, Recycle, MapPin, Truck, Trash2, RotateCcw } from 'lucide-react';
 
 /**
@@ -78,43 +78,28 @@ export function StatsSection() {
   return (
     <section className="py-20 bg-muted/50">
       <div className="app-container">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('stats.title')}</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">{t('stats.description')}</p>
+        <div className="mb-16">
+          <SectionHeader title={t('stats.title')} description={t('stats.description')} size="lg" />
         </div>
 
         {/* KPI 核心数据卡片 */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-center mb-8">{t('stats.kpi.title')}</h2>
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-            {kpiStats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <Card
-                  key={index}
-                  className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                >
-                  <CardContent className="pt-6">
-                    <div className={`${stat.bgColor} rounded-2xl p-6 mb-4`}>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="w-16 h-16 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-sm">
-                          <Icon className={`h-8 w-8 ${stat.color}`} />
-                        </div>
-                        <div className="text-right">
-                          <h3 className="text-4xl font-bold mb-1">{stat.value}</h3>
-                          <Badge variant="secondary" className="text-xs">
-                            {t('stats.kpi.verified')}
-                          </Badge>
-                        </div>
-                      </div>
-                      <h4 className="font-semibold text-lg mb-2">{stat.label}</h4>
-                      <div className="text-sm text-muted-foreground mb-3">{stat.description}</div>
-                      <div className="text-xs text-muted-foreground italic border-t pt-2">{stat.case}</div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+            {kpiStats.map((stat, index) => (
+              <StatCard
+                key={index}
+                icon={stat.icon}
+                value={stat.value}
+                label={stat.label}
+                description={stat.description}
+                case={stat.case}
+                badge={t('stats.kpi.verified')}
+                iconColor={stat.color}
+                bgColor={stat.bgColor}
+                className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              />
+            ))}
           </div>
         </div>
 
@@ -122,21 +107,17 @@ export function StatsSection() {
         <div>
           <h2 className="text-2xl font-bold text-center mb-8">{t('stats.overall.title')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {overallStats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <Card key={index} className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow">
-                  <CardContent className="pt-6">
-                    <div className="w-16 h-16 bg-background rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
-                      <Icon className={`h-8 w-8 ${stat.color}`} />
-                    </div>
-                    <h3 className="text-3xl font-bold mb-2">{stat.value}</h3>
-                    <h4 className="font-semibold text-lg mb-2">{stat.label}</h4>
-                    <div className="text-sm text-muted-foreground">{stat.description}</div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+            {overallStats.map((stat, index) => (
+              <StatCard
+                key={index}
+                icon={stat.icon}
+                value={stat.value}
+                label={stat.label}
+                description={stat.description}
+                iconColor={stat.color}
+                className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow"
+              />
+            ))}
           </div>
         </div>
       </div>

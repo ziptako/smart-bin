@@ -1,9 +1,9 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { AlertTriangle, Thermometer, Eye, ArrowRight } from 'lucide-react';
+import { ScenarioCard } from '@/components/scenario-card';
+import { SectionHeader } from '@/components/section-header';
+import { AlertTriangle, Thermometer, Eye } from 'lucide-react';
 
 /**
  * 场景解决方案组件
@@ -48,57 +48,24 @@ export function ScenarioSection() {
   return (
     <section className="py-20 bg-background">
       <div className="app-container">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('scenarios.title')}</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">{t('scenarios.description')}</p>
+        <div className="mb-16">
+          <SectionHeader title={t('scenarios.title')} description={t('scenarios.description')} size="lg" />
         </div>
 
         <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-          {scenarios.map((scenario, index) => {
-            const Icon = scenario.icon;
-            return (
-              <Card
-                key={index}
-                className={`border-2 ${scenario.borderColor} shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105`}
-              >
-                <CardHeader className={`${scenario.bgColor} rounded-t-lg`}>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-lg flex items-center justify-center shadow-sm">
-                        <Icon className={`h-6 w-6 ${scenario.color}`} />
-                      </div>
-                      <CardTitle className="text-lg">
-                        <h3>{scenario.scenario}</h3>
-                      </CardTitle>
-                    </div>
-                    <Badge variant="secondary" className={`${scenario.color} font-bold`}>
-                      {scenario.accuracy}
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-6">
-                  <div className="space-y-4">
-                    {/* 痛点 */}
-                    <div>
-                      <h4 className="font-semibold text-red-600 dark:text-red-400 mb-2">痛点</h4>
-                      <p className="text-sm text-muted-foreground">{scenario.problem}</p>
-                    </div>
-
-                    {/* 箭头 */}
-                    <div className="flex justify-center">
-                      <ArrowRight className="h-5 w-5 text-muted-foreground" />
-                    </div>
-
-                    {/* 解决方案 */}
-                    <div>
-                      <h4 className="font-semibold text-green-600 dark:text-green-400 mb-2">解决方案</h4>
-                      <p className="text-sm text-foreground font-medium">{scenario.solution}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
+          {scenarios.map((scenario, index) => (
+            <ScenarioCard
+              key={index}
+              icon={scenario.icon}
+              scenario={scenario.scenario}
+              problem={scenario.problem}
+              solution={scenario.solution}
+              accuracy={scenario.accuracy}
+              iconColor={scenario.color}
+              bgColor={scenario.bgColor}
+              borderColor={scenario.borderColor}
+            />
+          ))}
         </div>
       </div>
     </section>
