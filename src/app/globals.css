@@ -131,4 +131,25 @@
   .navbar-container {
     @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
+  
+  /* 可点击元素的鼠标指针样式 */
+  button,
+  [role="button"],
+  a,
+  [role="link"],
+  .cursor-pointer,
+  [data-clickable="true"],
+  [tabindex="0"]:not(input):not(textarea):not(select) {
+    @apply cursor-pointer;
+  }
+  
+  /* 禁用状态的元素不显示手指指针 */
+  button:disabled,
+  [role="button"]:disabled,
+  a[aria-disabled="true"],
+  [role="link"][aria-disabled="true"],
+  .cursor-pointer:disabled,
+  [data-clickable="true"]:disabled {
+    @apply cursor-not-allowed;
+  }
 }

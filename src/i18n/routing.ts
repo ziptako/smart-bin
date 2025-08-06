@@ -17,6 +17,26 @@ export const routing = defineRouting({
     '/about': {
       en: '/about',
       zh: '/about'
+    },
+    '/login': {
+      en: '/login',
+      zh: '/login'
+    },
+    '/register': {
+      en: '/register',
+      zh: '/register'
+    },
+    '/forgot-password': {
+      en: '/forgot-password',
+      zh: '/forgot-password'
+    },
+    '/terms': {
+      en: '/terms',
+      zh: '/terms'
+    },
+    '/privacy': {
+      en: '/privacy',
+      zh: '/privacy'
     }
   }
 });

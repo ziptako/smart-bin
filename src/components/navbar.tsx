@@ -65,11 +65,11 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-2">
             <LanguageSwitcher />
             <ThemeToggle />
-            <Button variant="outline" size="sm" className="h-9">
-              {t('login')}
+            <Button variant="outline" size="sm" className="h-9" asChild>
+              <Link href="/login">{t('login')}</Link>
             </Button>
-            <Button size="sm" className="h-9">
-              {t('register')}
+            <Button size="sm" className="h-9" asChild>
+              <Link href="/register">{t('register')}</Link>
             </Button>
           </div>
 
@@ -103,14 +103,18 @@ export function Navbar() {
                 </div>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Button variant="outline" size="sm" className="w-full justify-start">
-                  {t('login')}
-                </Button>
+                <Link href="/login" className="w-full">
+                  <Button variant="outline" size="sm" className="w-full justify-start">
+                    {t('login')}
+                  </Button>
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Button size="sm" className="w-full justify-start">
-                  {t('register')}
-                </Button>
+                <Link href="/register" className="w-full">
+                  <Button size="sm" className="w-full justify-start">
+                    {t('register')}
+                  </Button>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
