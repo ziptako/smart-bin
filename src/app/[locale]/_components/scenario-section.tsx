@@ -1,14 +1,16 @@
+/**
+ * CSR Scenario Section Component - 客户端渲染场景解决方案组件
+ * Client-Side Rendered Scenario Section Component
+ *
+ * 此组件在客户端渲染，展示具体场景-痛点-解决方案的三段式卡片
+ * This component is client-side rendered, displays scenario-problem-solution three-part cards
+ */
 'use client';
 
 import { useTranslations } from 'next-intl';
 import { ScenarioCard } from '@/components/scenario-card';
 import { SectionHeader } from '@/components/section-header';
 import { AlertTriangle, Thermometer, Eye } from 'lucide-react';
-
-/**
- * 场景解决方案组件
- * 展示具体场景-痛点-解决方案的三段式卡片
- */
 export function ScenarioSection() {
   const t = useTranslations('HomePage');
 

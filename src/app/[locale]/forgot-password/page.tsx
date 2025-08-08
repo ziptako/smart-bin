@@ -1,3 +1,10 @@
+/**
+ * CSR Forgot Password Page Component - 客户端渲染忘记密码页面组件
+ * Client-Side Rendered Forgot Password Page Component
+ *
+ * 此组件在客户端渲染，提供邮箱验证和密码重置功能
+ * This component is client-side rendered, provides email verification and password reset functionality
+ */
 'use client';
 
 import { useState } from 'react';
@@ -9,11 +16,6 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { ArrowLeft, Mail, CheckCircle } from 'lucide-react';
-
-/**
- * 忘记密码页面组件
- * 提供邮箱验证和密码重置功能
- */
 export default function ForgotPasswordPage() {
   const t = useTranslations('auth');
   const [email, setEmail] = useState('');

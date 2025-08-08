@@ -1,14 +1,16 @@
+/**
+ * CSR Language Switcher Component - 客户端渲染语言切换器组件
+ * Client-Side Rendered Language Switcher Component
+ *
+ * 此组件在客户端渲染，允许用户在支持的语言之间切换
+ * This component is client-side rendered, allows users to switch between supported languages
+ */
 'use client';
 
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 import { routing, type Locale } from '@/i18n/routing';
 import { Button } from '@/components/ui/button';
-
-/**
- * 语言切换器组件
- * 允许用户在支持的语言之间切换
- */
 export default function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();

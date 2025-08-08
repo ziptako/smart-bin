@@ -1,3 +1,10 @@
+/**
+ * CSR Navigation Component - 客户端渲染导航组件
+ * Client-Side Rendered Navigation Component
+ *
+ * 此组件在客户端渲染，包含交互式导航菜单和主题切换功能
+ * This component is client-side rendered with interactive navigation menu and theme toggle features
+ */
 'use client';
 
 import * as React from 'react';

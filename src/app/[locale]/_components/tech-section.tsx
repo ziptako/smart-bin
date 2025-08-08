@@ -1,3 +1,10 @@
+/**
+ * CSR Tech Section Component - 客户端渲染技术规格组件
+ * Client-Side Rendered Tech Section Component
+ *
+ * 此组件在客户端渲染，可折叠的技术栈展示，默认收起状态
+ * This component is client-side rendered, collapsible tech stack display, collapsed by default
+ */
 'use client';
 
 import { useState } from 'react';
@@ -6,11 +13,6 @@ import { Button } from '@/components/ui/button';
 import { TechCard } from '@/components/tech-card';
 import { SectionHeader } from '@/components/section-header';
 import { Cpu, Cloud, Smartphone, Database, Wifi, Shield, ChevronDown, ChevronUp } from 'lucide-react';
-
-/**
- * 技术规格组件
- * 可折叠的技术栈展示，默认收起状态
- */
 export function TechSection() {
   const t = useTranslations('HomePage');
   const [isExpanded, setIsExpanded] = useState(false);

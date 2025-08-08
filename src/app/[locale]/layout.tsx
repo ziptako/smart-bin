@@ -1,3 +1,10 @@
+/**
+ * SSR Layout Component - 服务端渲染布局组件
+ * Server-Side Rendered Layout Component
+ *
+ * 此组件在服务端渲染，为所有页面提供统一的布局结构
+ * This component is server-side rendered and provides unified layout structure for all pages
+ */
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
@@ -40,6 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const currentSeo = seoData[locale as keyof typeof seoData] || seoData.en;
 
   return {
+    metadataBase: new URL('https://bin.ziptako.com'),
     title: currentSeo.title,
     description: currentSeo.description,
     keywords: currentSeo.keywords,
@@ -60,7 +68,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       type: 'website',
       locale: locale,
-      url: `https://smart-bin.com/${locale}`,
+      url: `https://bin.ziptako.com/${locale}`,
       title: currentSeo.title,
       description: currentSeo.description,
       siteName: 'Smart Bin',

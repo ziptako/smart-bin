@@ -1,3 +1,10 @@
+/**
+ * CSR Register Page Component - 客户端渲染注册页面组件
+ * Client-Side Rendered Register Page Component
+ *
+ * 此组件在客户端渲染，提供用户注册功能，支持国际化
+ * This component is client-side rendered, provides user registration functionality with internationalization support
+ */
 'use client';
 
 import { useState } from 'react';
@@ -7,11 +14,6 @@ import { RegisterForm } from './_components/register-form';
 import { RegisterRequestDto } from '@/types/auth';
 import { register } from '@/api/auth';
 import { Link } from '@/i18n/navigation';
-
-/**
- * 注册页面组件
- * 提供用户注册功能，支持国际化
- */
 export default function RegisterPage() {
   const t = useTranslations('auth');
   const router = useRouter();

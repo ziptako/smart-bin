@@ -1,3 +1,10 @@
+/**
+ * CSR Login Page Component - 客户端渲染登录页面组件
+ * Client-Side Rendered Login Page Component
+ *
+ * 此组件在客户端渲染，提供用户登录功能，支持国际化
+ * This component is client-side rendered, provides user login functionality with internationalization support
+ */
 'use client';
 
 import { useState } from 'react';
@@ -7,11 +14,6 @@ import { LoginForm } from './_components/login-form';
 import { LoginRequestDto } from '@/types/auth';
 import { login } from '@/api/auth';
 import { Link } from '@/i18n/navigation';
-
-/**
- * 登录页面组件
- * 提供用户登录功能，支持国际化
- */
 export default function LoginPage() {
   const t = useTranslations('auth');
   const router = useRouter();

@@ -1,3 +1,10 @@
+/**
+ * CSR Trust Section Component - 客户端渲染信任链组件
+ * Client-Side Rendered Trust Section Component
+ *
+ * 此组件在客户端渲染，展示客户案例、认证证书和第三方测试报告
+ * This component is client-side rendered, displays customer cases, certifications and third-party test reports
+ */
 'use client';
 
 import { useTranslations } from 'next-intl';
@@ -6,11 +13,6 @@ import { SectionHeader } from '@/components/section-header';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Download, Shield, Award } from 'lucide-react';
-
-/**
- * 信任链组件
- * 展示客户案例、认证证书和第三方测试报告
- */
 export function TrustSection() {
   const t = useTranslations('HomePage');
 
