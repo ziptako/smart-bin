@@ -190,7 +190,7 @@ export function LoginForm({ onSubmit, loading = false }: LoginFormProps) {
           <p className="text-xs text-blue-600 dark:text-blue-400 font-medium mb-1">{t('demoAccounts')}:</p>
           <div className="text-xs text-blue-600 dark:text-blue-400 space-y-1">
             <div>{t('adminAccount')}</div>
-            <div>{t('userAccount')}</div>
+            <div>{t('cleanerAccount')}</div>
           </div>
         </div>
       )}

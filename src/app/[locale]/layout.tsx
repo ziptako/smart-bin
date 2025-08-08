@@ -12,7 +12,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing, type Locale } from '@/i18n/routing';
 import { ThemeProvider } from '@/components/theme-provider';
-import { Navbar } from '@/components/navbar';
+import { ConditionalNavbar } from '@/components/conditional-navbar';
 import '../globals.css';
 
 const geistSans = Geist({
@@ -122,7 +122,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <NextIntlClientProvider messages={messages}>
-            <Navbar />
+            <ConditionalNavbar />
             <main>{children}</main>
           </NextIntlClientProvider>
         </ThemeProvider>

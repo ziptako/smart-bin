@@ -35,8 +35,21 @@ export default function LoginPage() {
       localStorage.setItem('refreshToken', response.refreshToken);
       localStorage.setItem('userInfo', JSON.stringify(response.userInfo));
 
-      // 跳转到首页或用户指定的页面
-      const redirectUrl = new URLSearchParams(window.location.search).get('redirect') || '/';
+      // 根据用户角色跳转到不同的后台界面
+      const userRole = response.userInfo.role;
+      let redirectUrl = new URLSearchParams(window.location.search).get('redirect');
+
+      if (!redirectUrl) {
+        // 根据角色确定默认跳转页面
+        if (userRole === 'officer' || userRole === 'admin') {
+          redirectUrl = '/dashboard/officer';
+        } else if (userRole === 'cleaner') {
+          redirectUrl = '/dashboard/cleaner';
+        } else {
+          redirectUrl = '/dashboard';
+        }
+      }
+
       router.push(redirectUrl);
     } catch (err: unknown) {
       console.error('Login error:', err);
