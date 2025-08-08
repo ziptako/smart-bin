@@ -1,3 +1,10 @@
+/**
+ * CSR Card UI Component - 客户端渲染卡片UI组件
+ * Client-Side Rendered Card UI Component
+ *
+ * 此组件在客户端渲染，提供可复用的卡片布局和样式
+ * This component is client-side rendered, provides reusable card layout and styles
+ */
 import * as React from 'react';
 
 import { cn } from '@/lib/utils';

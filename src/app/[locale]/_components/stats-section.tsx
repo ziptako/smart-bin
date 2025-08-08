@@ -1,14 +1,16 @@
+/**
+ * CSR Stats Section Component - 客户端渲染数据统计组件
+ * Client-Side Rendered Stats Section Component
+ *
+ * 此组件在客户端渲染，展示具体的KPI数据和可验证的案例
+ * This component is client-side rendered, displays specific KPI data and verifiable cases
+ */
 'use client';
 
 import { useTranslations } from 'next-intl';
 import { StatCard } from '@/components/stat-card';
 import { SectionHeader } from '@/components/section-header';
 import { TrendingUp, Users, Recycle, MapPin, Truck, Trash2, RotateCcw } from 'lucide-react';
-
-/**
- * 数据统计组件
- * 展示具体的KPI数据和可验证的案例
- */
 export function StatsSection() {
   const t = useTranslations('HomePage');
 

@@ -1,3 +1,10 @@
+/**
+ * CSR Hero Section Component - 客户端渲染英雄区组件
+ * Client-Side Rendered Hero Section Component
+ *
+ * 此组件在客户端渲染，包含交互功能和动态内容
+ * This component is client-side rendered with interactive features and dynamic content
+ */
 'use client';
 
 import { useTranslations } from 'next-intl';

@@ -1,3 +1,10 @@
+/**
+ * CSR Developer Section Component - 客户端渲染开发者社区组件
+ * Client-Side Rendered Developer Section Component
+ *
+ * 此组件在客户端渲染，提供GitHub仓库、API文档、SDK和社区入口
+ * This component is client-side rendered, provides GitHub repository, API documentation, SDK and community access
+ */
 'use client';
 
 import { useTranslations } from 'next-intl';
@@ -5,11 +12,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Github, Code, MessageSquare, Book, Users, ExternalLink } from 'lucide-react';
-
-/**
- * 开发者社区组件
- * 提供GitHub仓库、API文档、SDK和社区入口
- */
 export function DeveloperSection() {
   const t = useTranslations('HomePage');
 

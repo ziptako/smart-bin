@@ -1,10 +1,12 @@
+/**
+ * SSR About Page Component - 服务端渲染关于页面组件
+ * Server-Side Rendered About Page Component
+ *
+ * 此组件在服务端渲染，展示智能垃圾桶系统的详细信息
+ * This component is server-side rendered, displays detailed information about the smart bin system
+ */
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-
-/**
- * 关于页面组件
- * 展示智能垃圾桶系统的详细信息
- */
 export default function About() {
   const tNav = useTranslations('Navigation');
   const tAbout = useTranslations('AboutPage');

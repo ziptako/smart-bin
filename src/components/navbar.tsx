@@ -1,3 +1,10 @@
+/**
+ * CSR Navigation Component - 客户端渲染导航组件
+ * Client-Side Rendered Navigation Component
+ *
+ * 此组件在客户端渲染，包含交互式导航菜单和主题切换功能
+ * This component is client-side rendered with interactive navigation menu and theme toggle features
+ */
 'use client';
 
 import * as React from 'react';
@@ -65,11 +72,11 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-2">
             <LanguageSwitcher />
             <ThemeToggle />
-            <Button variant="outline" size="sm" className="h-9">
-              {t('login')}
+            <Button variant="outline" size="sm" className="h-9" asChild>
+              <Link href="/login">{t('login')}</Link>
             </Button>
-            <Button size="sm" className="h-9">
-              {t('register')}
+            <Button size="sm" className="h-9" asChild>
+              <Link href="/register">{t('register')}</Link>
             </Button>
           </div>
 
@@ -103,14 +110,18 @@ export function Navbar() {
                 </div>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Button variant="outline" size="sm" className="w-full justify-start">
-                  {t('login')}
-                </Button>
+                <Link href="/login" className="w-full">
+                  <Button variant="outline" size="sm" className="w-full justify-start">
+                    {t('login')}
+                  </Button>
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Button size="sm" className="w-full justify-start">
-                  {t('register')}
-                </Button>
+                <Link href="/register" className="w-full">
+                  <Button size="sm" className="w-full justify-start">
+                    {t('register')}
+                  </Button>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

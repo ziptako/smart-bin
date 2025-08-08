@@ -1,3 +1,10 @@
+/**
+ * CSR CTA Section Component - 客户端渲染行动号召区块组件
+ * Client-Side Rendered Call-to-Action Section Component
+ *
+ * 此组件在客户端渲染，展示行动号召内容和联系方式
+ * This component is client-side rendered, displays call-to-action content and contact information
+ */
 'use client';
 
 import { useTranslations } from 'next-intl';

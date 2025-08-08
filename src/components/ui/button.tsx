@@ -1,3 +1,10 @@
+/**
+ * CSR Button UI Component - 客户端渲染按钮UI组件
+ * Client-Side Rendered Button UI Component
+ *
+ * 此组件在客户端渲染，提供可复用的按钮样式和变体
+ * This component is client-side rendered, provides reusable button styles and variants
+ */
 import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';

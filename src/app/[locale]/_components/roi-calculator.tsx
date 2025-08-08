@@ -1,3 +1,12 @@
+/**
+ * CSR ROI Calculator Component (Dynamic Import) - 客户端渲染投资回报率计算器组件（动态导入）
+ * Client-Side Rendered ROI Calculator Component (Dynamic Import)
+ *
+ * 此组件通过动态导入在客户端渲染，从SSG页面中分离出来，提供交互式计算功能
+ * This component is dynamically imported and client-side rendered, separated from SSG page to provide interactive calculation
+ * 帮助决策者计算Smart Bin投资回报率和环保效益
+ * Helps decision makers calculate Smart Bin ROI and environmental benefits
+ */
 'use client';
 
 import { useState } from 'react';
@@ -7,11 +16,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { Calculator, TrendingUp, Leaf } from 'lucide-react';
-
-/**
- * ROI计算器组件
- * 帮助决策者计算Smart Bin投资回报率和环保效益
- */
 export function ROICalculator() {
   const t = useTranslations('HomePage');
 
