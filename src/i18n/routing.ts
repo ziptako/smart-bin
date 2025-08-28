@@ -54,10 +54,7 @@ export const routing = defineRouting({
       en: '/dashboard/officer/bins',
       zh: '/dashboard/officer/bins'
     },
-    '/dashboard/officer/routes': {
-      en: '/dashboard/officer/routes',
-      zh: '/dashboard/officer/routes'
-    },
+
     '/dashboard/officer/analytics': {
       en: '/dashboard/officer/analytics',
       zh: '/dashboard/officer/analytics'
@@ -97,6 +94,10 @@ export const routing = defineRouting({
     '/dashboard/cleaner/checkin': {
       en: '/dashboard/cleaner/checkin',
       zh: '/dashboard/cleaner/checkin'
+    },
+    '/dashboard/route-optimization': {
+      en: '/dashboard/route-optimization',
+      zh: '/dashboard/route-optimization'
     }
   }
 });

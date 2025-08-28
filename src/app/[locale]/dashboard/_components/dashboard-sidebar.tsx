@@ -54,7 +54,7 @@ function getNavigationItems(role: string, t: (key: string) => string) {
       },
       {
         name: t('officer.routeOptimization'),
-        href: '/dashboard/officer/routes' as const,
+        href: '/dashboard/route-optimization' as const,
         icon: Route,
       },
       {
@@ -84,6 +84,11 @@ function getNavigationItems(role: string, t: (key: string) => string) {
         name: t('cleaner.dashboard'),
         href: '/dashboard/cleaner' as const,
         icon: LayoutDashboard,
+      },
+      {
+        name: t('cleaner.routeOptimization'),
+        href: '/dashboard/route-optimization' as const,
+        icon: Route,
       },
       {
         name: t('cleaner.tasks'),
