@@ -2,7 +2,7 @@ import * as React from 'react';
 import { MetricsGrid } from './metrics-grid';
 import { QuickActions } from './quick-actions';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Activity, TrendingUp, Users, MapPin } from 'lucide-react';
+import { Activity, TrendingUp } from 'lucide-react';
 
 interface DashboardPageProps {
   className?: string;

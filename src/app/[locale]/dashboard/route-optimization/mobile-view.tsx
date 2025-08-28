@@ -17,36 +17,21 @@ import {
   Navigation,
   Route,
   Clock,
-  Target,
   Play,
   Pause,
   RefreshCw,
   CheckCircle,
   AlertCircle,
   XCircle,
-  ArrowLeft,
-  ArrowRight,
-  Phone,
-  MessageSquare,
-  Volume2,
-  Eye,
-  EyeOff,
-  Layers,
-  Filter,
   ZoomIn,
   ZoomOut,
   RotateCcw,
   BarChart3,
   Settings,
-  Download,
-  Upload,
   Truck,
   Zap,
   TrendingUp,
   AlertTriangle,
-  Info,
-  User,
-  Calendar,
   CheckSquare,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -56,8 +41,7 @@ import { cn } from '@/lib/utils';
  * Mobile map view
  */
 function MobileMapView() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [currentLocation, setCurrentLocation] = useState('香港中环');
+  const [currentLocation] = useState('香港中环');
 
   return (
     <div className="relative w-full h-64 bg-gradient-to-br from-blue-50 to-green-50 dark:from-gray-800 dark:to-gray-900 rounded-lg border">

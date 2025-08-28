@@ -11,8 +11,6 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {
-  Layers,
-  Filter,
   Target,
   ZoomIn,
   ZoomOut,
@@ -20,11 +18,7 @@ import {
   Eye,
   EyeOff,
   MapPin,
-  Route,
-  Clock,
-  AlertTriangle,
 } from 'lucide-react';
-import { cn } from '@/lib/utils';
 
 interface MapControlsProps {
   onLayerChange: (layer: string) => void;

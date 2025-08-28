@@ -12,24 +12,17 @@ import { useTranslations } from 'next-intl';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
 import {
   MapPin,
-  Navigation,
   Route,
   Clock,
   Target,
   Settings,
   RefreshCw,
   Play,
-  Pause,
-  Layers,
-  Filter,
   Download,
   Upload,
   BarChart3,
-  Calendar,
-  Users,
   Truck,
   Zap,
   TrendingUp,
@@ -53,39 +46,12 @@ import { MobileRouteOptimizationView } from './mobile-view';
  */
 function MapView() {
   const [isLoading, setIsLoading] = useState(true);
-  const [mapState, setMapState] = useState({
-    layer: 'satellite',
-    filter: 'all',
-    binVisible: true,
-    routeVisible: true,
-    trafficVisible: false,
-  });
 
   useEffect(() => {
     // 模拟地图加载
     const timer = setTimeout(() => setIsLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
-
-  const handleLayerChange = (layer: string) => {
-    setMapState(prev => ({ ...prev, layer }));
-  };
-
-  const handleFilterChange = (filter: string) => {
-    setMapState(prev => ({ ...prev, filter }));
-  };
-
-  const handleToggleBinVisibility = () => {
-    setMapState(prev => ({ ...prev, binVisible: !prev.binVisible }));
-  };
-
-  const handleToggleRouteVisibility = () => {
-    setMapState(prev => ({ ...prev, routeVisible: !prev.routeVisible }));
-  };
-
-  const handleToggleTrafficVisibility = () => {
-    setMapState(prev => ({ ...prev, trafficVisible: !prev.trafficVisible }));
-  };
 
   return (
     <div className="relative w-full h-full bg-gradient-to-br from-blue-50 to-green-50 dark:from-gray-800 dark:to-gray-900 rounded-lg border">
@@ -103,8 +69,8 @@ function MapView() {
             <div className="w-full h-full bg-gradient-to-br from-blue-100 to-green-100 dark:from-blue-900/20 dark:to-green-900/20 rounded-lg border-2 border-dashed border-blue-300 dark:border-blue-600 relative">
               {/* 模拟垃圾桶标记点 */}
               <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-red-500 rounded-full border-2 border-white shadow-lg animate-pulse"></div>
-              <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-yellow-500 rounded-full border-2 border-white shadow-lg"></div>
-              <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-green-500 rounded-full border-2 border-white shadow-lg"></div>
+              <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-yellow-500 rounded-full border-2 border-white shadow-lg animate-pulse"></div>
+              <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-green-500 rounded-full border-2 border-white shadow-lg animate-pulse"></div>
               <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-red-500 rounded-full border-2 border-white shadow-lg animate-pulse"></div>
               
               {/* 模拟路线 */}
